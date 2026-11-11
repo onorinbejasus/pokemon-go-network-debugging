@@ -1,0 +1,7 @@
+# Times the tester pressed Enter: tapped into battle, battle frozen (mobile) / loaded (wifi), end.
+
+PGO pid at start: 
+[18:57:30] MARK BATTLE_START
+[18:57:36] MARK FROZEN_OR_LOADED
+PGO pid at freeze: 
+[18:58:42] MARK END

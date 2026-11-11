@@ -1,0 +1,14 @@
+# Run WHILE the battle was frozen on mobile data: game socket states, then adb-shell connects to the same servers at the same moment.
+# (First attempt: script failed to resolve the game uid, so no game sockets listed; shell connects still 10/10.)
+
+label=mobile Tue Nov 10 19:32:37 CST 2026 net=Unknown,LTE game_uid=
+## game sockets at freeze (state remote)
+
+## adb-shell connects to the same servers, right now (10 each)
+130.211.14.80:443      connected 10/10  rc: 0 0 0 0 0 0 0 0 0 0
+34.117.15.92:443       connected 10/10  rc: 0 0 0 0 0 0 0 0 0 0
+
+## 10 simultaneous connects to 130.211.14.80:443 (burst test)
+0 0 0 0 0 0 0 0 0 0 
+
+## game sockets again after tests

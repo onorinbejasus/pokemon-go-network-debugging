@@ -1,0 +1,16 @@
+# Pokemon GO (uid 10403) TCP sockets decoded from /proc/net/tcp{,6} at the "frozen/loaded" moment (mobile).
+# retr = SYN retransmissions so far. On mobile, connections to 34.117.15.92 and 130.211.14.80 sit in SYN_SENT.
+
+tcp   SYN_SENT 192.0.0.8:59006  -> 34.117.15.92:443    txq=1 rxq=0 retr=8
+tcp   SYN_SENT 192.0.0.8:52490  -> 130.211.14.80:443    txq=1 rxq=0 retr=5
+tcp   SYN_SENT 192.0.0.8:52186  -> 130.211.14.80:443    txq=1 rxq=0 retr=0
+tcp   ESTAB    192.0.0.8:35898  -> 34.110.167.47:443    txq=0 rxq=38 retr=0
+tcp   ESTAB    192.0.0.8:36844  -> 34.49.26.121:443    txq=0 rxq=0 retr=0
+tcp   ESTAB    192.0.0.8:59728  -> 130.211.14.80:443    txq=0 rxq=0 retr=0
+tcp6  ESTAB    [IPv6-REDACTED]:58368  -> 2600:1900:4115:c81:::443    txq=0 rxq=0 retr=0
+tcp6  ESTAB    192.0.0.8:48198  -> 130.211.14.80:443    txq=0 rxq=0 retr=0
+tcp6  ESTAB    192.0.0.8:48174  -> 130.211.14.80:443    txq=0 rxq=0 retr=0
+tcp6  ESTAB    192.0.0.8:48218  -> 130.211.14.80:443    txq=0 rxq=0 retr=0
+tcp6  ESTAB    192.0.0.8:48214  -> 130.211.14.80:443    txq=0 rxq=0 retr=0
+tcp6  ESTAB    192.0.0.8:48226  -> 130.211.14.80:443    txq=0 rxq=0 retr=0
+tcp6  ESTAB    [IPv6-REDACTED]:59628  -> 2600:1901:0:5e8a:::443    txq=0 rxq=0 retr=0

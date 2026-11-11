@@ -1,0 +1,43 @@
+# ping reachability + path-MTU probes (all pings here have DF SET, by design of -M do).
+
+## 19:04:02 basic reachability
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=117 time=17.9 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=117 time=20.4 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=117 time=19.3 ms
+64 bytes from 8.8.8.8: icmp_seq=4 ttl=117 time=33.3 ms
+
+--- 8.8.8.8 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3004ms
+rtt min/avg/max/mdev = 17.932/22.756/33.322/6.165 ms
+PING 2001:4860:4860::8888(2001:4860:4860::8888) 56 data bytes
+64 bytes from 2001:4860:4860::8888: icmp_seq=1 ttl=117 time=18.5 ms
+64 bytes from 2001:4860:4860::8888: icmp_seq=2 ttl=117 time=28.4 ms
+64 bytes from 2001:4860:4860::8888: icmp_seq=3 ttl=117 time=26.9 ms
+64 bytes from 2001:4860:4860::8888: icmp_seq=4 ttl=117 time=26.7 ms
+
+--- 2001:4860:4860::8888 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3004ms
+rtt min/avg/max/mdev = 18.559/25.178/28.437/3.879 ms
+
+## IPv4 path-MTU (DF set) - payload sizes
+v4 1472: 2 packets transmitted, 2 received, 0% packet loss, time 1000ms 
+v4 1452: 2 packets transmitted, 2 received, 0% packet loss, time 1001ms 
+v4 1432: 2 packets transmitted, 2 received, 0% packet loss, time 1001ms 
+v4 1412: 2 packets transmitted, 2 received, 0% packet loss, time 1001ms 
+v4 1392: 2 packets transmitted, 2 received, 0% packet loss, time 1001ms 
+v4 1372: 2 packets transmitted, 2 received, 0% packet loss, time 1001ms 
+v4 1352: 2 packets transmitted, 2 received, 0% packet loss, time 1001ms 
+v4 1300: 2 packets transmitted, 2 received, 0% packet loss, time 1000ms 
+v4 1252: 2 packets transmitted, 2 received, 0% packet loss, time 1001ms 
+v4 1200: 2 packets transmitted, 2 received, 0% packet loss, time 1000ms 
+
+## IPv6 path-MTU - payload sizes
+v6 1452: 2 packets transmitted, 2 received, 0% packet loss, time 1001ms 
+v6 1432: 2 packets transmitted, 2 received, 0% packet loss, time 1001ms 
+v6 1412: 2 packets transmitted, 2 received, 0% packet loss, time 1001ms 
+v6 1392: 2 packets transmitted, 1 received, 50% packet loss, time 1006ms 
+v6 1372: 2 packets transmitted, 2 received, 0% packet loss, time 1001ms 
+v6 1352: 2 packets transmitted, 2 received, 0% packet loss, time 1001ms 
+v6 1300: 2 packets transmitted, 2 received, 0% packet loss, time 1001ms 
+v6 1232: 2 packets transmitted, 2 received, 0% packet loss, time 1001ms 

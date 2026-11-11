@@ -1,0 +1,41 @@
+# Run WHILE the battle was frozen on mobile data: game socket states, then adb-shell connects to the same servers at the same moment.
+# Game: SYN_SENT (no reply) to 130.211.14.80 and 34.117.15.92.  Shell, same moment: 10/10 + 10-way burst all succeed.
+# 0.0.0.0 lines are IPv6 sockets mis-printed by the script (they were working).
+
+label=mobile Tue Nov 10 19:34:24 CST 2026 net=Unknown,LTE game_uid=10403
+## game sockets at freeze (state remote)
+SYN_SENT 130.211.14.80:443
+ESTAB 130.211.14.80:443
+SYN_SENT 130.211.14.80:443
+SYN_SENT 34.117.15.92:443
+ESTAB 34.110.167.47:443
+ESTAB 34.49.26.121:443
+ESTAB 130.211.14.80:443
+ESTAB 130.211.14.80:443
+ESTAB 130.211.14.80:443
+ESTAB 0.0.0.0:443
+ESTAB 0.0.0.0:443
+ESTAB 130.211.14.80:443
+ESTAB 130.211.14.80:443
+
+## adb-shell connects to the same servers, right now (10 each)
+130.211.14.80:443      connected 10/10  rc: 0 0 0 0 0 0 0 0 0 0
+34.117.15.92:443       connected 10/10  rc: 0 0 0 0 0 0 0 0 0 0
+
+## 10 simultaneous connects to 130.211.14.80:443 (burst test)
+0 0 0 0 0 0 0 0 0 0 
+
+## game sockets again after tests
+01 130.211.14.80:443
+02 130.211.14.80:443
+02 34.117.15.92:443
+01 34.110.167.47:443
+01 34.49.26.121:443
+02 130.211.14.80:443
+01 130.211.14.80:443
+01 130.211.14.80:443
+01 130.211.14.80:443
+01 0.0.0.0:443
+01 0.0.0.0:443
+01 130.211.14.80:443
+01 130.211.14.80:443

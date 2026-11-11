@@ -1,0 +1,19 @@
+# Mobile-data network configuration. Note: IPv4 192.0.0.8/27 assigned directly to rmnet_data7 (no Android clatd v4- interface), MTU 1436.
+
+## private DNS: mode=hostname spec=dns.adguard-dns.com
+## data saver:
+Restrict background status: disabled
+## always-on VPN app: null
+37: rmnet_data7@rmnet_ipa0: <UP,LOWER_UP> mtu 1436 qdisc mq state UNKNOWN group default qlen 1000
+    inet 192.0.0.8/27 brd 192.0.0.31 scope global rmnet_data7
+    inet6 [IPv6-REDACTED] scope global 
+    inet6 [fe80-REDACTED]/64 scope link 
+38: rmnet_data8@rmnet_ipa0: <UP,LOWER_UP> mtu 1436 qdisc mq state UNKNOWN group default qlen 1000
+    inet6 [IPv6-REDACTED] scope global 
+    inet6 [fe80-REDACTED]/64 scope link 
+44: wlan0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc mq state DOWN group default qlen 3000
+
+## routes in the default network table (1037)
+default via 192.0.0.7 dev rmnet_data7 table 1037 proto static mtu 1436 
+192.0.0.0/27 dev rmnet_data7 table 1037 proto static scope link 
+default via [fe80-REDACTED] dev rmnet_data7 table 1037 proto ra metric 1024 expires 60581sec hoplimit 255 pref medium

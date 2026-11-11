@@ -1,0 +1,100 @@
+# All logcat lines from the Pokemon GO process (pid 23006) from 10s before tapping into the battle until capture end, plus test markers.
+# The game keeps processing touches (ViewPostIme) and location updates while "frozen": it is waiting on the network, not hung.
+# GPS coordinates redacted.
+
+11-10 18:57:20.103 23006 23006 I VRI[UnityMainActivity]@cb4c51b: ViewPostIme pointer 0
+11-10 18:57:20.104 23006 23006 I VRI[UnityMainActivity]@cb4c51b: call setFrameRateCategory category=high hint, reason=touch, vri=VRI[UnityMainActivity]@cb4c51b
+11-10 18:57:20.147 23006 23006 I VRI[UnityMainActivity]@cb4c51b: ViewPostIme pointer 1
+11-10 18:57:20.165 23006  2729 I QUAGO-SDK: QuagoManager.Handler() → handle TOUCH Segment
+11-10 18:57:20.178 23006 23006 I VRI[UnityMainActivity]@cb4c51b: call setFrameRateCategory category=no preference, reason=idle timeout, vri=VRI[UnityMainActivity]@cb4c51b
+11-10 18:57:20.989 23006 23006 D AndroidLocationManager: Latitude: [REDACTED], Longitude: [REDACTED]
+11-10 18:57:21.032 23006 23006 I BLASTBufferQueue_Java: update, w= 1080 h= 2340 mName = VRI[UnityMainActivity]@cb4c51b mNativeObject= 0x739d65be60 sc.mNativeObject= 0x738d606010 format= -3 caller= android.view.ViewRootImpl.updateBlastSurfaceIfNeeded:3898 android.view.ViewRootImpl.updateRenderTargetIfNeeded:3890 android.view.ViewRootImpl.relayoutWindow:12632 android.view.ViewRootImpl.performTraversals:5287 android.view.ViewRootImpl.doTraversal:4255 android.view.ViewRootImpl$TraversalCallback.onVsync:13896 
+11-10 18:57:21.032 23006 23006 I VRI[UnityMainActivity]@cb4c51b: Relayout returned: old=(0,0,1080,2340) new=(0,0,1080,2340) relayoutAsync=true req=(1080,2340)0 dur=0 res=0x0 s={true 0x724d6380b0} ch=false seqId=1 syncSeqId=0
+11-10 18:57:21.032 23006 23006 I VRI[UnityMainActivity]@cb4c51b: updateBoundsLayer: t=android.view.SurfaceControl$Transaction@ef9b89e sc=Surface(name=Bounds for - com.nianticlabs.pokemongo.ares/com.nianticproject.holoholo.libholoholo.unity.UnityMainActivity@0#53862)/@0xec7ef7f frame=5
+11-10 18:57:21.032 23006 23006 I VRI[UnityMainActivity]@cb4c51b: registerCallbackForPendingTransactions
+11-10 18:57:21.032 23006 23006 I VRI[UnityMainActivity]@cb4c51b: call setFrameRateCategory category=normal, reason=intermittent, vri=VRI[UnityMainActivity]@cb4c51b
+11-10 18:57:21.032 23006  1614 I VRI[UnityMainActivity]@cb4c51b: mWNT: t=0x729d9e3f20 fn= 5 HdrRenderState mRenderHdrSdrRatio=1.0 caller= android.view.ViewRootImpl$10.onFrameDraw:7108 android.view.ViewRootImpl$4.onFrameDraw:2700 android.view.ThreadedRenderer$1.onFrameDraw:750 
+11-10 18:57:21.311 23006 23006 I VRI[UnityMainActivity]@cb4c51b: ViewPostIme pointer 0
+11-10 18:57:21.311 23006 23006 I VRI[UnityMainActivity]@cb4c51b: call setFrameRateCategory category=high hint, reason=touch, vri=VRI[UnityMainActivity]@cb4c51b
+11-10 18:57:21.496 23006 23006 I VRI[UnityMainActivity]@cb4c51b: ViewPostIme pointer 1
+11-10 18:57:21.526 23006 23006 I VRI[UnityMainActivity]@cb4c51b: call setFrameRateCategory category=no preference, reason=unknown, vri=VRI[UnityMainActivity]@cb4c51b
+11-10 18:57:22.233 23006 23006 I VRI[UnityMainActivity]@cb4c51b: ViewPostIme pointer 0
+11-10 18:57:22.233 23006 23006 I VRI[UnityMainActivity]@cb4c51b: call setFrameRateCategory category=high hint, reason=touch, vri=VRI[UnityMainActivity]@cb4c51b
+11-10 18:57:22.273 23006 23006 I VRI[UnityMainActivity]@cb4c51b: ViewPostIme pointer 1
+11-10 18:57:22.304 23006 23006 I VRI[UnityMainActivity]@cb4c51b: call setFrameRateCategory category=no preference, reason=idle timeout, vri=VRI[UnityMainActivity]@cb4c51b
+11-10 18:57:22.991 23006 23006 D AndroidLocationManager: Latitude: [REDACTED], Longitude: [REDACTED]
+11-10 18:57:23.055 23006 23006 I VRI[UnityMainActivity]@cb4c51b: ViewPostIme pointer 0
+11-10 18:57:23.055 23006 23006 I VRI[UnityMainActivity]@cb4c51b: call setFrameRateCategory category=high hint, reason=touch, vri=VRI[UnityMainActivity]@cb4c51b
+11-10 18:57:23.083 23006 23006 I VRI[UnityMainActivity]@cb4c51b: ViewPostIme pointer 1
+11-10 18:57:23.113 23006 23006 I VRI[UnityMainActivity]@cb4c51b: call setFrameRateCategory category=no preference, reason=idle timeout, vri=VRI[UnityMainActivity]@cb4c51b
+11-10 18:57:23.220 23006  1426 D SensorManager: registerListener fail (2) :: 111, Rotation Vector  Non-wakeup, 20000, 0, com.unity3d.player.o0@974c1c9
+11-10 18:57:24.214 23006 23006 I VRI[UnityMainActivity]@cb4c51b: ViewPostIme pointer 0
+11-10 18:57:24.214 23006 23006 I VRI[UnityMainActivity]@cb4c51b: call setFrameRateCategory category=high hint, reason=touch, vri=VRI[UnityMainActivity]@cb4c51b
+11-10 18:57:24.259 23006 23006 I VRI[UnityMainActivity]@cb4c51b: ViewPostIme pointer 1
+11-10 18:57:24.289 23006 23006 I VRI[UnityMainActivity]@cb4c51b: call setFrameRateCategory category=no preference, reason=idle timeout, vri=VRI[UnityMainActivity]@cb4c51b
+11-10 18:57:24.992 23006 23006 D AndroidLocationManager: Latitude: [REDACTED], Longitude: [REDACTED]
+11-10 18:57:26.991 23006 23006 D AndroidLocationManager: Latitude: [REDACTED], Longitude: [REDACTED]
+11-10 18:57:28.990 23006 23006 D AndroidLocationManager: Latitude: [REDACTED], Longitude: [REDACTED]
+11-10 18:57:30.283  6332  6332 I adbd    : adbd service requested 'shell,v2,TERM=xterm-256color,raw:log -p w -t PGDEBUG MARK BATTLE_START'
+11-10 18:57:30.300  3083  3083 W PGDEBUG : MARK BATTLE_START
+11-10 18:57:30.411 23006 23006 I VRI[UnityMainActivity]@cb4c51b: ViewPostIme pointer 0
+11-10 18:57:30.411 23006 23006 I VRI[UnityMainActivity]@cb4c51b: call setFrameRateCategory category=high hint, reason=touch, vri=VRI[UnityMainActivity]@cb4c51b
+11-10 18:57:30.484 23006 23006 I VRI[UnityMainActivity]@cb4c51b: ViewPostIme pointer 1
+11-10 18:57:30.514 23006 23006 I VRI[UnityMainActivity]@cb4c51b: call setFrameRateCategory category=no preference, reason=idle timeout, vri=VRI[UnityMainActivity]@cb4c51b
+11-10 18:57:33.995 23006 23006 D AndroidLocationManager: Latitude: [REDACTED], Longitude: [REDACTED]
+11-10 18:57:35.994 23006 23006 D AndroidLocationManager: Latitude: [REDACTED], Longitude: [REDACTED]
+11-10 18:57:36.916  6332  6332 I adbd    : adbd service requested 'shell,v2,TERM=xterm-256color,raw:log -p w -t PGDEBUG MARK FROZEN_OR_LOADED'
+11-10 18:57:36.933  3215  3215 W PGDEBUG : MARK FROZEN_OR_LOADED
+11-10 18:57:38.996 23006 23006 D AndroidLocationManager: Latitude: [REDACTED], Longitude: [REDACTED]
+11-10 18:57:40.994 23006 23006 D AndroidLocationManager: Latitude: [REDACTED], Longitude: [REDACTED]
+11-10 18:57:44.997 23006 23006 D AndroidLocationManager: Latitude: [REDACTED], Longitude: [REDACTED]
+11-10 18:57:46.995 23006 23006 D AndroidLocationManager: Latitude: [REDACTED], Longitude: [REDACTED]
+11-10 18:57:48.822 23006 23006 D AndroidLocationManager: Latitude: [REDACTED], Longitude: [REDACTED]
+11-10 18:57:50.995 23006 23006 D AndroidLocationManager: Latitude: [REDACTED], Longitude: [REDACTED]
+11-10 18:57:53.004 23006 23006 D AndroidLocationManager: Latitude: [REDACTED], Longitude: [REDACTED]
+11-10 18:57:54.996 23006 23006 D AndroidLocationManager: Latitude: [REDACTED], Longitude: [REDACTED]
+11-10 18:57:56.760 23006 23006 I VRI[UnityMainActivity]@cb4c51b: ViewPostIme pointer 0
+11-10 18:57:56.760 23006 23006 I VRI[UnityMainActivity]@cb4c51b: call setFrameRateCategory category=high hint, reason=touch, vri=VRI[UnityMainActivity]@cb4c51b
+11-10 18:57:56.799 23006 23006 I VRI[UnityMainActivity]@cb4c51b: ViewPostIme pointer 1
+11-10 18:57:56.829 23006 23006 I VRI[UnityMainActivity]@cb4c51b: call setFrameRateCategory category=no preference, reason=idle timeout, vri=VRI[UnityMainActivity]@cb4c51b
+11-10 18:57:56.866 23006 23006 I VRI[UnityMainActivity]@cb4c51b: ViewPostIme pointer 0
+11-10 18:57:56.866 23006 23006 I VRI[UnityMainActivity]@cb4c51b: call setFrameRateCategory category=high hint, reason=touch, vri=VRI[UnityMainActivity]@cb4c51b
+11-10 18:57:56.944 23006 23006 I VRI[UnityMainActivity]@cb4c51b: ViewPostIme pointer 1
+11-10 18:57:56.974 23006 23006 I VRI[UnityMainActivity]@cb4c51b: call setFrameRateCategory category=no preference, reason=idle timeout, vri=VRI[UnityMainActivity]@cb4c51b
+11-10 18:57:56.996 23006 23006 D AndroidLocationManager: Latitude: [REDACTED], Longitude: [REDACTED]
+11-10 18:57:58.988 23006 23006 D AndroidLocationManager: Latitude: [REDACTED], Longitude: [REDACTED]
+11-10 18:58:00.994 23006 23006 D AndroidLocationManager: Latitude: [REDACTED], Longitude: [REDACTED]
+11-10 18:58:02.997 23006 23006 D AndroidLocationManager: Latitude: [REDACTED], Longitude: [REDACTED]
+11-10 18:58:05.807 23006 23006 D AndroidLocationManager: Latitude: [REDACTED], Longitude: [REDACTED]
+11-10 18:58:08.997 23006 23006 D AndroidLocationManager: Latitude: [REDACTED], Longitude: [REDACTED]
+11-10 18:58:10.996 23006 23006 D AndroidLocationManager: Latitude: [REDACTED], Longitude: [REDACTED]
+11-10 18:58:12.997 23006 23006 D AndroidLocationManager: Latitude: [REDACTED], Longitude: [REDACTED]
+11-10 18:58:15.995 23006 23006 D AndroidLocationManager: Latitude: [REDACTED], Longitude: [REDACTED]
+11-10 18:58:16.457 23006 23006 I VRI[UnityMainActivity]@cb4c51b: ViewPostIme pointer 0
+11-10 18:58:16.457 23006 23006 I VRI[UnityMainActivity]@cb4c51b: call setFrameRateCategory category=high hint, reason=touch, vri=VRI[UnityMainActivity]@cb4c51b
+11-10 18:58:16.596 23006 23006 I VRI[UnityMainActivity]@cb4c51b: ViewPostIme pointer 1
+11-10 18:58:16.626 23006 23006 I VRI[UnityMainActivity]@cb4c51b: call setFrameRateCategory category=no preference, reason=idle timeout, vri=VRI[UnityMainActivity]@cb4c51b
+11-10 18:58:17.997 23006 23006 D AndroidLocationManager: Latitude: [REDACTED], Longitude: [REDACTED]
+11-10 18:58:19.995 23006 23006 D AndroidLocationManager: Latitude: [REDACTED], Longitude: [REDACTED]
+11-10 18:58:21.996 23006 23006 D AndroidLocationManager: Latitude: [REDACTED], Longitude: [REDACTED]
+11-10 18:58:23.995 23006 23006 D AndroidLocationManager: Latitude: [REDACTED], Longitude: [REDACTED]
+11-10 18:58:26.995 23006 23006 D AndroidLocationManager: Latitude: [REDACTED], Longitude: [REDACTED]
+11-10 18:58:28.994 23006 23006 D AndroidLocationManager: Latitude: [REDACTED], Longitude: [REDACTED]
+11-10 18:58:30.527 23006 29465 I WM-WorkerWrapper: Work [ id=8ebaf6ba-f868-4e71-a9a2-0cdcb1083f02, tags={ com.nianticproject.holoholo.libholoholo.autocatcher.SoftSfidaWorker, SoftSfidaOneTimeWork, 2026-11-10 18:48:30, UpdateContext=4 } ] was cancelled
+11-10 18:58:30.527 23006 29465 I WM-WorkerWrapper: java.util.concurrent.CancellationException: Task was cancelled.
+11-10 18:58:30.527 23006 29465 I WM-WorkerWrapper: 	at androidx.work.impl.utils.futures.AbstractFuture.cancellationExceptionWithCause(AbstractFuture.java:1183)
+11-10 18:58:30.527 23006 29465 I WM-WorkerWrapper: 	at androidx.work.impl.utils.futures.AbstractFuture.getDoneValue(AbstractFuture.java:513)
+11-10 18:58:30.527 23006 29465 I WM-WorkerWrapper: 	at androidx.work.impl.utils.futures.AbstractFuture.get(AbstractFuture.java:474)
+11-10 18:58:30.527 23006 29465 I WM-WorkerWrapper: 	at androidx.work.impl.WorkerWrapper$2.run(WorkerWrapper.java:316)
+11-10 18:58:30.527 23006 29465 I WM-WorkerWrapper: 	at androidx.work.impl.utils.SerialExecutorImpl$Task.run(SerialExecutorImpl.java:96)
+11-10 18:58:30.527 23006 29465 I WM-WorkerWrapper: 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1100)
+11-10 18:58:30.527 23006 29465 I WM-WorkerWrapper: 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624)
+11-10 18:58:30.527 23006 29465 I WM-WorkerWrapper: 	at java.lang.Thread.run(Thread.java:1571)
+11-10 18:58:30.529 23006 29462 I WM-WorkerWrapper: Worker result FAILURE for Work [ id=8ebaf6ba-f868-4e71-a9a2-0cdcb1083f02, tags={ com.nianticproject.holoholo.libholoholo.autocatcher.SoftSfidaWorker, SoftSfidaOneTimeWork, 2026-11-10 18:48:30, UpdateContext=4 } ]
+11-10 18:58:30.996 23006 23006 D AndroidLocationManager: Latitude: [REDACTED], Longitude: [REDACTED]
+11-10 18:58:32.992 23006 23006 D AndroidLocationManager: Latitude: [REDACTED], Longitude: [REDACTED]
+11-10 18:58:34.995 23006 23006 D AndroidLocationManager: Latitude: [REDACTED], Longitude: [REDACTED]
+11-10 18:58:36.994 23006 23006 D AndroidLocationManager: Latitude: [REDACTED], Longitude: [REDACTED]
+11-10 18:58:41.995 23006 23006 D AndroidLocationManager: Latitude: [REDACTED], Longitude: [REDACTED]
+11-10 18:58:42.567  6332  6332 I adbd    : adbd service requested 'shell,v2,TERM=xterm-256color,raw:log -p w -t PGDEBUG MARK END'
+11-10 18:58:42.589  3969  3969 W PGDEBUG : MARK END

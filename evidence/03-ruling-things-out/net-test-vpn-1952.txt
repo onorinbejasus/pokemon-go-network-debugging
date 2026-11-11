@@ -1,0 +1,12 @@
+# 10 fresh TCP connects from `adb shell` (toybox nc) per target. rc 0 = connected, 1 = failed.
+# nat64 rows use T-Mobile's 64:ff9b::/96 prefix (expected to fail on Wi-Fi). 142.250.191.100 was a bad test address (fails everywhere).
+
+label=vpn Tue Nov 10 19:52:32 CST 2026  net=Unknown,LTE  wifi: Wi-Fi is disabled
+v4     34.117.15.92             connected 10/10   rc: 0 0 0 0 0 0 0 0 0 0
+nat64  64:ff9b::2275:f5c        connected  0/10   rc: 1 1 1 1 1 1 1 1 1 1
+v4     130.211.14.80            connected 10/10   rc: 0 0 0 0 0 0 0 0 0 0
+nat64  64:ff9b::82d3:e50        connected  0/10   rc: 1 1 1 1 1 1 1 1 1 1
+v4     34.110.167.47            connected 10/10   rc: 0 0 0 0 0 0 0 0 0 0
+nat64  64:ff9b::226e:a72f       connected  0/10   rc: 1 1 1 1 1 1 1 1 1 1
+v4     142.250.191.100          connected  0/10   rc: 1 1 1 1 1 1 1 1 1 1
+v4     1.1.1.1                  connected 10/10   rc: 0 0 0 0 0 0 0 0 0 0

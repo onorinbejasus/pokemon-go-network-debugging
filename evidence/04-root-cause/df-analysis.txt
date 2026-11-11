@@ -1,0 +1,70 @@
+# PCAPdroid capture (all apps, ~2 min, LTE) of a battle that WORKED because PCAPdroid re-originates traffic.
+# The packets recorded are what the apps handed to the network stack, i.e. what normally goes to the modem.
+# Totals below are over the WHOLE capture (all apps); flow list limited to the game servers.
+# 10-in-a-row flows at 01:54:43-01:54:48 UTC are the adb-shell net_test (DF set); everything else is the game.
+# Only the game, and only to 130.211.14.80 / 34.117.15.92, sends packets with the IPv4 DF bit CLEAR.
+
+Outbound IPv4 packets: 1122   with DF CLEAR: 319
+DF-clear packets by destination:
+  130.211.14.80    300
+  34.117.15.92     19
+
+TCP flows to 130.211.14.80, 34.110.167.47, 34.117.15.92:
+start (UTC)     destination            src port  IP flags   SYN-ACK pkts out/in
+01:54:10.398    34.117.15.92:443          49278  no-DF      True    9/11
+01:54:10.486    130.211.14.80:443         58662  DF         True    131/143
+01:54:10.514    130.211.14.80:443         58674  DF         True    35/39
+01:54:10.761    130.211.14.80:443         58678  DF         True    14/14
+01:54:10.843    130.211.14.80:443         58682  DF         True    14/15
+01:54:33.890    130.211.14.80:443         37334  DF         True    10/9
+01:54:33.891    130.211.14.80:443         37340  DF         True    8/8
+01:54:33.893    130.211.14.80:443         37356  DF         True    8/8
+01:54:36.781    130.211.14.80:443         37360  no-DF      True    43/55
+01:54:36.781    130.211.14.80:443         37376  no-DF      True    108/133
+01:54:37.569    130.211.14.80:443         37380  no-DF      True    22/29
+01:54:43.185    34.117.15.92:443          48528  DF         True    3/3
+01:54:43.346    34.117.15.92:443          33662  DF         True    3/3
+01:54:43.499    34.117.15.92:443          33670  DF         True    3/3
+01:54:43.663    34.117.15.92:443          33674  DF         True    3/3
+01:54:43.829    34.117.15.92:443          33684  DF         True    3/3
+01:54:43.997    34.117.15.92:443          33690  DF         True    3/3
+01:54:44.153    34.117.15.92:443          33706  DF         True    3/3
+01:54:44.312    34.117.15.92:443          33710  DF         True    3/3
+01:54:44.460    34.117.15.92:443          33716  DF         True    3/3
+01:54:44.612    34.117.15.92:443          33728  DF         True    3/3
+01:54:45.186    130.211.14.80:443         45090  DF         True    3/3
+01:54:45.349    130.211.14.80:443         45102  DF         True    3/3
+01:54:45.486    130.211.14.80:443         45108  DF         True    3/3
+01:54:45.648    130.211.14.80:443         45120  DF         True    3/3
+01:54:45.795    130.211.14.80:443         45130  DF         True    3/3
+01:54:45.957    130.211.14.80:443         45136  DF         True    3/3
+01:54:46.119    130.211.14.80:443         45148  DF         True    3/3
+01:54:46.282    130.211.14.80:443         45162  DF         True    3/3
+01:54:46.438    130.211.14.80:443         45168  DF         True    3/3
+01:54:46.579    130.211.14.80:443         45182  DF         True    3/3
+01:54:47.125    34.110.167.47:443         46104  DF         True    3/3
+01:54:47.295    34.110.167.47:443         46114  DF         True    3/3
+01:54:47.460    34.110.167.47:443         46128  DF         True    3/3
+01:54:47.615    34.110.167.47:443         46132  DF         True    3/3
+01:54:47.766    34.110.167.47:443         46144  DF         True    3/3
+01:54:47.935    34.110.167.47:443         46158  DF         True    3/3
+01:54:48.102    34.110.167.47:443         46174  DF         True    3/3
+01:54:48.114    130.211.14.80:443         45194  no-DF      True    15/21
+01:54:48.283    34.110.167.47:443         46180  DF         True    3/3
+01:54:48.445    34.110.167.47:443         46186  DF         True    3/3
+01:54:48.587    34.110.167.47:443         46198  DF         True    3/3
+01:54:52.680    130.211.14.80:443         45208  no-DF      True    17/25
+01:54:55.748    130.211.14.80:443         38218  no-DF      True    48/71
+01:55:09.054    130.211.14.80:443         35974  no-DF      True    24/28
+01:55:12.605    34.117.15.92:443          49418  no-DF      True    10/12
+01:55:13.553    130.211.14.80:443         55020  no-DF      True    9/9
+01:55:13.755    130.211.14.80:443         55036  DF,no-DF   True    15/20
+01:55:43.732    130.211.14.80:443         51642  DF         True    11/10
+
+TLS ClientHello server names (SNI) for the game's connections, from the full capture
+(other apps' rows omitted for privacy; the published pcap is header-only so SNI is not in it):
+  count  server IP        SNI                                    IP DF bit
+      8  130.211.14.80    pgorelease.nianticlabs.com             DF set
+      9  130.211.14.80    pgorelease.nianticlabs.com             DF CLEAR
+      2  34.117.15.92     pushgateway-release.nianticlabs.com    DF CLEAR
+      1  34.117.65.169    niantic-social-api.nianticlabs.com     DF set

@@ -1,0 +1,20 @@
+# Per-app firewall: only OEM_DENY_1 and BACKGROUND chains are active; the game is not in OEM_DENY_1 and is allow-listed for BACKGROUND -> not blocked.
+
+  current ownerMatch configuration: 4608 OEM_DENY_1_MATCH BACKGROUND_MATCH
+  sUidOwnerMap entry for game: 10403 HAPPY_BOX_MATCH POWERSAVE_MATCH BACKGROUND_MATCH
+  sDataSaverEnabledMap: false
+  sL4sEnabledMap: false
+
+## netd Samsung eBPF L4S map (game uid is listed, but L4S marking is globally disabled: sL4sEnabledMap=false)
+    mL4sMap status: OK
+
+    mL4sMap:
+
+    L4S RT Map
+    10442 1
+    10415 1
+    10403 1
+    10441 1
+    10268 1
+    10283 1
+

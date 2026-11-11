@@ -1,0 +1,43 @@
+# ping reachability + path-MTU probes (all pings here have DF SET, by design of -M do).
+
+## 18:57:38 basic reachability
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=111 time=48.5 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=111 time=53.6 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=111 time=26.9 ms
+64 bytes from 8.8.8.8: icmp_seq=4 ttl=111 time=56.9 ms
+
+--- 8.8.8.8 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3002ms
+rtt min/avg/max/mdev = 26.978/46.518/56.926/11.668 ms
+PING 2001:4860:4860::8888(2001:4860:4860::8888) 56 data bytes
+64 bytes from 2001:4860:4860::8888: icmp_seq=1 ttl=116 time=31.6 ms
+64 bytes from 2001:4860:4860::8888: icmp_seq=2 ttl=116 time=29.2 ms
+64 bytes from 2001:4860:4860::8888: icmp_seq=3 ttl=116 time=28.0 ms
+64 bytes from 2001:4860:4860::8888: icmp_seq=4 ttl=116 time=26.5 ms
+
+--- 2001:4860:4860::8888 ping statistics ---
+4 packets transmitted, 4 received, 0% packet loss, time 3005ms
+rtt min/avg/max/mdev = 26.517/28.872/31.699/1.906 ms
+
+## IPv4 path-MTU (DF set) - payload sizes
+v4 1472: ping: local error: Message too long, mtu=1436 ping: local error: Message too long, mtu=1436 2 packets transmitted, 0 received, +2 errors, 100% packet loss, time 1019ms 
+v4 1452: ping: local error: Message too long, mtu=1436 ping: local error: Message too long, mtu=1436 2 packets transmitted, 0 received, +2 errors, 100% packet loss, time 1008ms 
+v4 1432: ping: local error: Message too long, mtu=1436 ping: local error: Message too long, mtu=1436 2 packets transmitted, 0 received, +2 errors, 100% packet loss, time 1003ms 
+v4 1412: ping: local error: Message too long, mtu=1436 ping: local error: Message too long, mtu=1436 2 packets transmitted, 0 received, +2 errors, 100% packet loss, time 1023ms 
+v4 1392: 2 packets transmitted, 2 received, 0% packet loss, time 1001ms 
+v4 1372: 2 packets transmitted, 2 received, 0% packet loss, time 1001ms 
+v4 1352: 2 packets transmitted, 2 received, 0% packet loss, time 1001ms 
+v4 1300: 2 packets transmitted, 2 received, 0% packet loss, time 1001ms 
+v4 1252: 2 packets transmitted, 2 received, 0% packet loss, time 1001ms 
+v4 1200: 2 packets transmitted, 2 received, 0% packet loss, time 1001ms 
+
+## IPv6 path-MTU - payload sizes
+v6 1452: ping: local error: Message too long, mtu=1436 ping: local error: Message too long, mtu=1436 2 packets transmitted, 0 received, +2 errors, 100% packet loss, time 1019ms 
+v6 1432: ping: local error: Message too long, mtu=1436 ping: local error: Message too long, mtu=1436 2 packets transmitted, 0 received, +2 errors, 100% packet loss, time 1027ms 
+v6 1412: ping: local error: Message too long, mtu=1436 ping: local error: Message too long, mtu=1436 2 packets transmitted, 0 received, +2 errors, 100% packet loss, time 1028ms 
+v6 1392: ping: local error: Message too long, mtu=1436 ping: local error: Message too long, mtu=1436 2 packets transmitted, 0 received, +2 errors, 100% packet loss, time 1023ms 
+v6 1372: 2 packets transmitted, 2 received, 0% packet loss, time 1001ms 
+v6 1352: 2 packets transmitted, 2 received, 0% packet loss, time 1001ms 
+v6 1300: 2 packets transmitted, 2 received, 0% packet loss, time 1001ms 
+v6 1232: 2 packets transmitted, 2 received, 0% packet loss, time 1001ms 

@@ -1,0 +1,11 @@
+# Kernel counters from both bug reports. Between them the game made ~350 connections and a full Wi-Fi battle,
+# yet TCP Fast Open and ECN counters did not move -> the game does not use TFO/ECN; ruled out.
+
+counter                  after-mobile-freeze(18:58)  after-wifi-battle(19:05)
+TCPFastOpenActive                   0                          0
+TCPFastOpenActiveFail             129                        129
+TCPFastOpenBlackhole                0                          0
+TCPSynRetrans                    9525                       9766
+InECT1Pkts                         30                         30
+InECT0Pkts                       4827                       4827
+InCEPkts                            0                          0

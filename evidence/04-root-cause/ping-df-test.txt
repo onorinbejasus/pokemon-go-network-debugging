@@ -1,0 +1,10 @@
+# The one-line reproduction, no game involved: on T-Mobile mobile data this phone drops IPv4 packets with DF clear.
+
+$ adb shell ping -c 5 -M do 8.8.8.8      # MOBILE DATA (T-Mobile LTE), DF set
+5 packets transmitted, 5 received, 0% packet loss, time 4006ms
+$ adb shell ping -c 5 -M dont 8.8.8.8    # MOBILE DATA (T-Mobile LTE), DF clear
+5 packets transmitted, 0 received, 100% packet loss, time 4093ms
+$ adb shell ping -c 5 -M do 8.8.8.8      # WI-FI, DF set
+5 packets transmitted, 5 received, 0% packet loss, time 4006ms
+$ adb shell ping -c 5 -M dont 8.8.8.8    # WI-FI, DF clear
+5 packets transmitted, 5 received, 0% packet loss, time 4005ms
